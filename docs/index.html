@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Computational Engineering Physics - Greg Kaiser</title>
+        <title>Computational Physics - Greg Kaiser</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/img/lorenz.ico" />
         <!--source for cog icon: https://www.iconarchive.com/show/small-n-flat-icons-by-paomedia/cogs-icon.html-->
@@ -40,7 +40,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <img class="rounded-circle" width="300" src="assets/img/lorenz.png" alt="" /><br>
+                <img class="rounded-circle" width="300" height="300" src="assets/img/lorenz.png" alt="" /><br>
                 <!-- Masthead Heading-->
                 <h1 class="masthead-heading text-uppercase mb-0">Gregory Kaiser <br> Computational Physics </h1>
                 <!-- Icon Divider-->
@@ -51,6 +51,17 @@
                 </div>
                 <!-- Masthead Subheading-->
                 <p class="masthead-subheading font-weight-light mb-0">Cornell University - AEP 4380</p>
+                <!-- Icon Divider-->
+                <!-- <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <p>
+                    For this class, I wrote programs in C to solve ten assignments, and then wrote Latex-style reports for each one. Years later, 
+                    I decided to re-implement these assignments using python partly to keep the ideas fresh and partly to see if the code could be a little cleaner
+                    outside the pressures of a weekly problem set. Also: it's a lot of fun.
+                </p> -->
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -72,40 +83,40 @@
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/photos/lab1/artemis_overhead.jpg" alt="" />
+                            <img class="img-fluid" src="assets/img/photos/a1/derivs.png" alt="" />
                         </div>
                         <h5 class="text-center">Assignment 1: Numerical Derivatives</h5>
                     </div>
-                    <!-- Portfolio Item 2
+                    <!-- Portfolio Item 2 -->
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/photos/lab2/artemis_ble.png" alt="" />
+                            <img class="img-fluid" src="assets/img/photos/a2/fresnel.png" alt="" />
                         </div>
-                        <h5 class="text-center">Lab 2: Bluetooth</h5>
-                    </div> -->
+                        <h5 class="text-center">Assignment 2: Numerical Integration</h5>
+                    </div>
                     <!-- Portfolio Item 3-->
-                    <!-- <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/photos/lab3/side_view.jpg" alt="" />
+                            <img class="img-fluid" src="assets/img/photos/a3/roots.png" alt="" />
                         </div>
-                        <h5 class="text-center">Lab 3: Characterizing Robot #4</h5>
-                    </div> -->
+                        <h5 class="text-center">Assignment 3: Root Finding and Special Functions</h5>
+                    </div>
                     <!-- Portfolio Item 4-->
-                    <!-- <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/photos/lab4/threeq_crop.jpg" alt="" />
+                            <img class="img-fluid" src="assets/img/photos/a4/rossler.png" alt="" />
                         </div>
-                        <h5 class="text-center">Lab 4: Open Loop Control</h5>
-                    </div> -->
+                        <h5 class="text-center">Assignment 4: Ordinary Differential Equations and Chaotic Systems</h5>
+                    </div>
                     <!-- Portfolio Item 5-->
                     <!-- <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
@@ -340,9 +351,21 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/lab1/artemis_overhead.jpg" alt="" />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/a1/derivs.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p>This assignment was mostly a warmup to get us started in this class, but it highlighted a couple of important limitations of numerical differentiation. </p>
+                                    <p>
+                                        <h5>Goals</h5>
+                                        This assignment was mostly a warmup to get us started in this class, but it highlighted a couple of important limitations of numerical differentiation. 
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/1 - Numerical Derivatives.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        A derivative is better with smaller evaluation steps. A central difference can prevent leading and lagging derivatives, provided you are ok
+                                        with losing some higher frequency content (tips of hills and troughs). 
+                                    </p>
 
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
@@ -367,7 +390,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">LAB 2: Bluetooth Connection to the Artemis</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Assignment 2: Numerical Integration</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -375,9 +398,23 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/lab2/artemis_ble.png" alt="" />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/a2/fresnel.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                        This assignment introduces a use-case for numerical integration in the form of Fresnel diffraction.
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        Although I was taught calculus with the concept of a Riemann sum (and trapezoid sum), I had not implemented a programmatic version until 
+                                        finishing this assignment. The equations which made the solution were given to us, but executing 
+                                        this highlighted the power of breaking down a complicated problem into a set of solvable individual problems.
+                                        This also served as a good example of an equation which had no analytical solution, but which yields to a numerical approach.
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -401,7 +438,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">LAB 3: Characterizing <i>Hot Wheels of Inquiry</i></h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Assignment 3: Root Finding and Special Functions</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -409,9 +446,25 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/lab3/side_view_rule.jpg" alt="" />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/a3/roots.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                        This assignment was partially about finding access to special scientific functions for numerical analysis, 
+                                        and partially about comparing a couple methods for root finding. In particular: how to access Bessel functions, 
+                                        useful for all sorts of physics, and then comparing Regula Falsi or the False Position Method to the method of 
+                                        Bisection for root finding.
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/3 - Root Finding and Special Functions.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        Some algorithms accomplish the same task as another but more efficiently (using fewer function calls). Some algorithms vary in their efficiency if given 
+                                        a different starting point or set of inputs. These conclusions are a bit obvious, but it still helps to see the differences in practice between,
+                                        for example, a bisection method and regula falsi.
+                                    </p>
 
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
@@ -436,7 +489,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label">LAB 4: Open Loop Control</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal4Label">Assignment 4: Ordinary Differential Equations and Chaotic Systems</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -444,9 +497,23 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/lab4/overhead_mod_crop.jpg" alt="" />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/a4/rossler.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                        This assignment introduced the Runge-Kutta method of ODE propagation and asked for solutions to a set of chaotic differential equations. My original solution 
+                                        was pretty single-shot, so I tried to spend a little time making the python version more reusable and modular.
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/4 - Ordinary Differential Equations and Chaotic Systems.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        The Runge-Kutta method is a good way to propagate differential equations which have no analytical solution (if they can be written in the appropriate form).
+                                        It is sometimes worth it to make functions and algorithms more modular and reusable to avoid re-writing code. Being able to apply 
+                                        your program to a wider range of tasks requires time and effort to architect correctly.
+                                    </p>
 
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
@@ -481,7 +548,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab5/top_down.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
 
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
@@ -516,7 +593,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab6/imu_img.jpg" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -550,7 +637,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab7/map_combo.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -584,7 +681,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab8/main_page.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -618,7 +725,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab9/result_plot_2.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -652,7 +769,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab10/path_real_map.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -686,7 +813,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab11/header.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -720,7 +857,17 @@
                                     <!-- Portfolio Modal - Image-->
                                     <img class="img-fluid rounded mb-5" src="assets/img/photos/lab12/plots/t_update/t06_noise01.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
-                                    
+                                    <p>
+                                        <h5>Goals</h5>
+                                    </p>
+                                    <p>
+                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        My original submission for this class took the form of a Latex-style writeup.
+                                    </p>
+                                    <p>
+                                        <h5>Takeaways</h5>
+                                        
+                                    </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
