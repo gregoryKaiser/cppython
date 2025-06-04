@@ -358,15 +358,33 @@
                                         This assignment was mostly a warmup to get us started in this class, but it highlighted a couple of important limitations of numerical differentiation. 
                                     </p>
                                     <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/1 - Numerical Derivatives.html" target="_blank">here</a>. 
-                                        My original submission for this class took the form of a Latex-style writeup.
+                                        My original submission for this class took the form of a C script and Latex-style writeup.
+                                        Please see the solution description below:
+                                        <iframe id="notebook-frame" src="assets/jupyterhtml/1 - Numerical Derivatives.html" width="100%" style="border: none;"></iframe>
+                                        <script>
+                                            const iframe = document.getElementById("notebook-frame");
+
+                                            iframe.onload = function () {
+                                                setTimeout(() => {
+                                                try {
+                                                    const doc = iframe.contentWindow.document;
+                                                    const height = doc.documentElement.scrollHeight || doc.body.scrollHeight;
+                                                    iframe.style.height = height + "px";
+                                                    console.log("Iframe height set to:", height);
+
+                                                } catch (err) {
+                                                    console.error("Could not access iframe contents:", err);
+                                                }
+                                                }, 500); // Increase delay if needed
+                                            };
+                                        </script>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
                                         A derivative is better with smaller evaluation steps. A central difference can prevent leading and lagging derivatives, provided you are ok
                                         with losing some higher frequency content (tips of hills and troughs). 
                                     </p>
-
+                                    
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
