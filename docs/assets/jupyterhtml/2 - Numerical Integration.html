@@ -3,7 +3,8 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>2 - Numerical Integration</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>2 - Numerical Integration</title>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script> -->
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7292,7 +7293,7 @@ a.anchor-link {
 }
 </style>
 <!-- Load mathjax -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script> -->
 <!-- MathJax configuration -->
 <script type="text/x-mathjax-config">
     init_mathjax = function() {
@@ -7848,15 +7849,19 @@ points: 8192	0.6518348917414453	1.107628911404094
 <p>$$S(\infty) = \int_{0}^{\infty}sin\left(\frac{\pi}{2}u^2\right)du = 0.5$$</p>
 <p>$$I(u_0) = \frac{1}{2}I_0\{[C(\infty)-C(-\infty)]^2+[S(\infty)-S(-\infty)]^2\} = \frac{1}{2}I_0\{[0.5-(-0.5)]^2+[0.5-(-0.5)]^2\} = I_0$$</p>
 <p>Therefore, the realtive intensity should approach 1, which the graph shows accurately.</p>
-<script>
-  if (window.MathJax && MathJax.typeset) {
-    MathJax.typeset();
-  }
-</script>
+
 </div>
 </div>
 </div>
 </div>
 </main>
+<script>
+  window.addEventListener("load", function () {
+    if (window.MathJax && MathJax.typeset) {
+      MathJax.typeset();
+    }
+  });
+</script>
+
 </body>
 </html>

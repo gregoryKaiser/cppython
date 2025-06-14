@@ -17,6 +17,21 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <!-- Load MathJax ONCE -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_CHTML-full,Safe"> </script> -->
+        <script>
+            window.MathJax = {
+                tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                },
+                svg: {
+                fontCache: 'global'
+                }
+            };
+            </script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -360,24 +375,9 @@
                                     <p>
                                         My original submission for this class took the form of a C script and Latex-style writeup.
                                         Please see the solution description below:<br>
-                                        <iframe id="notebook-frame-1" src="assets/jupyterhtml/1 - Numerical Derivatives.html" height="700px" width="100%" style="border: none;"></iframe>
-                                        <!-- <script>
-                                            const iframe = document.getElementById("notebook-frame");
-
-                                            iframe.onload = function () {
-                                                setTimeout(() => {
-                                                try {
-                                                    const doc = iframe.contentWindow.document;
-                                                    const height = doc.documentElement.scrollHeight || doc.body.scrollHeight;
-                                                    iframe.style.height = height + "px";
-                                                    console.log("Iframe height set to:", height);
-
-                                                } catch (err) {
-                                                    console.error("Could not access iframe contents:", err);
-                                                }
-                                                }, 500); // Increase delay if needed
-                                            };
-                                        </script> -->
+                                        <div>
+                                            <iframe id="notebook-frame-1" src="./assets/jupyterhtml/1 - Numerical Derivatives.html" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -425,7 +425,10 @@
                                     <p> 
                                         My original submission for this class took the form of a C script and Latex-style writeup.
                                         Please see the solution description below:<br>
-                                        <iframe id="notebook-frame-2" src="assets/jupyterhtml/2 - Numerical Integration.html" height="700px" width="100%" style="border: none;"></iframe>
+                                        <div>
+                                            <iframe id="notebook-frame-2" src="./assets/jupyterhtml/2 - Numerical Integration.html" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
+                                        <!-- <iframe id="notebook-frame-2" src="assets/jupyterhtml/2 - Numerical Integration.html" height="700px" width="100%" style="border: none;"></iframe> -->
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -477,7 +480,10 @@
                                     <p>
                                         My original submission for this class took the form of a Latex-style writeup.
                                         Please see the solution description below:<br>
-                                        <iframe id="notebook-frame-3" src="assets/jupyterhtml/3 - Root Finding and Special Functions.html" height="700px" width="100%" style="border: none;"></iframe>
+                                        <div>
+                                            <iframe id="notebook-frame-3" src="./assets/jupyterhtml/3 - Root Finding and Special Functions.html" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
+                                        <!-- <iframe id="notebook-frame-3" src="assets/jupyterhtml/3 - Root Finding and Special Functions.html" height="700px" width="100%" style="border: none;"></iframe> -->
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -528,7 +534,10 @@
                                         
                                         My original submission for this class took the form of a Latex-style writeup.
                                         Please see the solution description below:<br>
-                                        <iframe id="notebook-frame-4" src="assets/jupyterhtml/4 - Ordinary Differential Equations and Chaotic Systems.html" height="700px" width="100%" style="border: none;"></iframe>
+                                        <div>
+                                            <iframe id="notebook-frame-4" src="./assets/jupyterhtml/4 - Ordinary Differential Equations and Chaotic Systems.html" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
+                                        <!-- <iframe id="notebook-frame-4" src="assets/jupyterhtml/4 - Ordinary Differential Equations and Chaotic Systems.html" height="700px" width="100%" style="border: none;"></iframe> -->
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -911,5 +920,39 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
+        <script>
+            /* ---- load MathJax inside every iframe ---- */
+            window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('iframe').forEach(frame => {
+
+                frame.addEventListener('load', () => {
+                const doc = frame.contentDocument || frame.contentWindow.document;
+                if (!doc || doc.getElementById('MathJax-injected')) return;  // already done / cross‑origin
+
+                /* 1  config */
+                const cfg = doc.createElement('script');
+                cfg.type = 'text/javascript';
+                cfg.text = `
+                    window.MathJax = {
+                    tex:  {inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                            displayMath: [['$$','$$'], ['\\\\[', '\\\\]']]},
+                    svg:  {fontCache: 'global'}
+                    };
+                `;
+                doc.head.appendChild(cfg);
+
+                /* 2  library */
+                const js = doc.createElement('script');
+                js.id  = 'MathJax-injected';
+                js.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                js.async = true;
+                doc.head.appendChild(js);
+                });
+
+            });
+            });
+        </script>
+
+
     </body>
 </html>
