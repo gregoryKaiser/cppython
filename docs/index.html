@@ -921,6 +921,49 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
         <script>
+            window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('iframe').forEach(frame => {
+
+                frame.addEventListener('load', () => {
+                const doc = frame.contentDocument || frame.contentWindow.document;
+                if (!doc || doc.getElementById('MathJax-injected')) return;
+
+                // Wait for body to fully load (critical!)
+                const tryInject = () => {
+                    if (!doc.body || doc.body.innerText.trim().length === 0) {
+                    setTimeout(tryInject, 50);
+                    return;
+                    }
+
+                    // 1. Inject config
+                    const cfg = doc.createElement('script');
+                    cfg.type = 'text/javascript';
+                    cfg.text = `
+                    window.MathJax = {
+                        tex: { inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
+                            displayMath: [['$$','$$'], ['\\\\[', '\\\\]']] },
+                        svg: { fontCache: 'global' }
+                    };
+                    `;
+                    doc.head.appendChild(cfg);
+
+                    // 2. Inject MathJax
+                    const js = doc.createElement('script');
+                    js.id  = 'MathJax-injected';
+                    js.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js';
+                    js.async = true;
+                    doc.head.appendChild(js);
+                };
+
+                // Kick off the loop
+                tryInject();
+                });
+
+            });
+            });
+        </script>
+
+        <!-- <script>
             /* ---- load MathJax inside every iframe ---- */
             window.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('iframe').forEach(frame => {
@@ -951,7 +994,7 @@
 
             });
             });
-        </script>
+        </script> -->
 
 
     </body>
