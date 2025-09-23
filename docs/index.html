@@ -133,15 +133,15 @@
                         <h5 class="text-center">Assignment 4: Ordinary Differential Equations and Chaotic Systems</h5>
                     </div>
                     <!-- Portfolio Item 5-->
-                    <!-- <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
-                            <img class="img-fluid" src="assets/img/photos/lab5/three_quart.jpg" alt="" />
+                            <img class="img-fluid" src="assets/img/photos/a5/gov_eqn.png" alt="" />
                         </div>
-                        <h5 class="text-center">Lab 5: Obstacle Avoidance</h5>
-                    </div> -->
+                        <h5 class="text-center">Assignment 5: Three or More Body Problem</h5>
+                    </div>
                     <!-- Portfolio Item 6-->
                     <!-- <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
@@ -426,7 +426,7 @@
                                         
                                         Please see the solution description below:<br>
                                         <div>
-                                            <iframe id="notebook-frame-2" src="./assets/jupyterhtml/2 - Numerical Integration.html" width="100%" style="min-width: 900px; height: 1000px; border: none;"></iframe>
+                                            <iframe id="notebook-frame-2" src="./assets/jupyterhtml/2 - Numerical Integration.html" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
                                         </div><br>
                                         <!-- <div>
                                             <iframe id="notebook-frame-2" src="../rough_solns/AEP_4380_Homework_2.pdf" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
@@ -442,7 +442,7 @@
                                         Although I was taught calculus with the concept of a Riemann sum (and trapezoid sum), I had not implemented a programmatic version until 
                                         finishing this assignment. The equations which made the solution were given to us, but executing 
                                         this highlighted the power of breaking down a complicated problem into a set of solvable individual problems.
-                                        This also served as a good example of an equation which had no analytical solution, but which yields to a numerical approach.
+                                        This also served as a good example of an equation which has no analytical solution, but which yields to a numerical approach.
                                     </p>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
@@ -589,7 +589,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal5Label">LAB 5: Obstacle Avoidance</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal5Label">Assignment 5: Three or More Body Problem</h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -597,18 +597,27 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/lab5/top_down.jpg" alt="" />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/a5/gov_eqn.png" alt="" />
                                     <!-- Portfolio Modal - Text-->
                                     <p>
                                         <h5>Goals</h5>
+                                        This assignment implements an adaptive step-size version of the Runge-Kutta method using the Dormand-Prince coefficients to simulate planetary orbits. 
+                                        Similarly to the other assignments, my original solution was very single-use, so I wanted the new
+                                        implementation to be more modular. In particular, I wanted to add and subtract orbiting bodies while maintaining the 
+                                        propagation style of my prior assignment. 
                                     </p>
                                     <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        <!-- Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>.  -->
                                         My original submission for this class took the form of a Latex-style writeup.
+                                        <div>
+                                            <iframe id="latex-frame-4" src="../rough_solns/AEP_4380_Homework_5.pdf" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
-                                        
+                                        My biggest takeaway from this assignment was how delicately balanced our solar system is. Of course, the anthropic principle necessitates the relative stability, 
+                                        but even a simple system with simple rules can be sensitive to initial conditions and to perturbation. Another takeaway from the reimplementation is just 
+                                        how difficult it is to architect an object oriented structure around a propagation based on in-line arrays.
                                     </p>
 
                                     <button class="btn btn-primary" data-dismiss="modal">
@@ -648,8 +657,11 @@
                                         <h5>Goals</h5>
                                     </p>
                                     <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        <!-- Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>.  -->
                                         My original submission for this class took the form of a Latex-style writeup.
+                                        <div>
+                                            <iframe id="latex-frame-4" src="../rough_solns/AEP_4380_Homework_6.pdf" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -692,8 +704,11 @@
                                         <h5>Goals</h5>
                                     </p>
                                     <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        <!-- Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>.  -->
                                         My original submission for this class took the form of a Latex-style writeup.
+                                        <div>
+                                            <iframe id="latex-frame-4" src="../rough_solns/AEP_4380_Homework_7.pdf" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -736,8 +751,11 @@
                                         <h5>Goals</h5>
                                     </p>
                                     <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        <!-- Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>.  -->
                                         My original submission for this class took the form of a Latex-style writeup.
+                                        <div>
+                                            <iframe id="latex-frame-4" src="../rough_solns/AEP_4380_Homework_8.pdf" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -780,8 +798,11 @@
                                         <h5>Goals</h5>
                                     </p>
                                     <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        <!-- Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>.  -->
                                         My original submission for this class took the form of a Latex-style writeup.
+                                        <div>
+                                            <iframe id="latex-frame-4" src="../rough_solns/AEP_4380_Homework_9.pdf" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
@@ -824,96 +845,11 @@
                                         <h5>Goals</h5>
                                     </p>
                                     <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
+                                        <!-- Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>.  -->
                                         My original submission for this class took the form of a Latex-style writeup.
-                                    </p>
-                                    <p>
-                                        <h5>Takeaways</h5>
-                                        
-                                    </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 11-->
-        <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-labelledby="portfolioModal11Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-left">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal11Label">LAB 11b: Inverted Pendulum Simulation Part 1: LQR control</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/lab11/header.png" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p>
-                                        <h5>Goals</h5>
-                                    </p>
-                                    <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
-                                        My original submission for this class took the form of a Latex-style writeup.
-                                    </p>
-                                    <p>
-                                        <h5>Takeaways</h5>
-                                        
-                                    </p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 11-->
-        <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-labelledby="portfolioModal21Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-left">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal12Label">LAB 12b: Inverted Pendulum Simulation Part 2: LQG</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/photos/lab12/plots/t_update/t06_noise01.png" alt="" />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p>
-                                        <h5>Goals</h5>
-                                    </p>
-                                    <p>
-                                        Please see my more detailed solution description <a href="./assets/jupyterhtml/2 - Numerical Integration.html" target="_blank">here</a>. 
-                                        My original submission for this class took the form of a Latex-style writeup.
+                                        <div>
+                                            <iframe id="latex-frame-4" src="../rough_solns/AEP_4380_Homework_10.pdf" width="100%" style="min-width: 800px; height: 1000px; border: none;"></iframe>
+                                        </div>
                                     </p>
                                     <p>
                                         <h5>Takeaways</h5>
